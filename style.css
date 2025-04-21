@@ -1,0 +1,394 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+  .top-banner {
+    background-color: #e21b70;
+    color: #fff;
+    padding: 12px 16px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+  }
+
+  .top-banner a {
+    color: white;
+    background-color: #c80060;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-left: 16px;
+    font-weight: normal;
+    border:1px solid #fff;
+
+  }
+.navbar {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 10px 50px;
+    top: 70px;
+}
+
+.nav-contant {
+    width: 95vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.nav-logo {
+    width: 180px;
+    height: 65px;
+    background-image: url('./assets/images/logo-png-foodpanda-app-icon-horizontal-wordmark_300x300.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.nav-right-contant {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.button {
+    width: 85px;
+    height: 33px;
+    margin-right: 12px;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: transform .2s;
+}
+
+.button:hover {
+    transform: scale(1.1)
+}
+
+.login-btn {
+    background-color: #ffffff;
+}
+
+.signin-btn {
+    background-color: #e21b70;
+    border: 1px solid #e21b70;
+}
+
+.signin-btn>a {
+    color: white;
+}
+
+.language-sectoin {
+    margin-right: 5px;
+}
+
+.language-sectoin>span {
+    font-weight: 600;
+}
+
+.language-icon {
+    font-size: large;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.cart-icon {
+    font-size: larger;
+}
+
+.fa-heart,.fa-user{
+    font-size: larger   ;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 600px;
+    box-shadow: rgba(0, 0, 0, 0.28) 0px -50px 36px -28px inset;
+}
+.main {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+.left-section {
+    width: 50vw;
+    height: 600px;
+}
+
+.left-section-contant {
+    width: 50vw;
+    height: 300px;
+    padding: 12px;
+    margin-left: 12px;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.left-section-contant>.hero-heading {
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-btn {
+    width: 110px;
+    height: 44px;
+    font-size: 17px;
+}
+
+.right-section {
+    width: 55vw;
+    height: 600px;
+}
+
+.bannar-panda {
+    background-image: url('./assets/images/refresh-hero-city-pk.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 8px;
+    background-position-y: center;
+    width: 50vw;
+    height: 600px;
+}
+
+.second-heading {
+    margin: 22px 12px;
+    padding: 10px;
+    margin-bottom: 0;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.second-bannar {
+    background-image: url('./assets/images/second-bannar-image.jpg');
+    width: 100vw;
+    height: 50vh;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+
+.admin-sectoin {
+    text-align: center;
+    margin: 38px 20px;
+    padding: 20px;
+    font-size: larger;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+    width: 100vw;
+    max-height: max-content;
+    padding: 10px 7px;
+}
+
+.footer-contant {
+    width: 90vw;
+    margin: auto;
+}
+
+.footer-heading {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: 600;
+}
+
+.footer-para {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+hr {
+    width: 90vw;
+}
+
+.last-sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons>a {
+    font-size: larger;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 38px;
+    border: 1px solid gray;
+    width: 55px;
+    transition: transform .2s;
+}
+
+.social-icons>a>i {
+    padding: 4px;
+    font-size: 20px;
+}
+.social-icons>a :hover{
+    transform: scale(1.2); 
+}
+
+/* login page css code------------->>>>> */
+.heading{
+    width: 100%;
+}
+.heading .quiz-tittle{
+    position: relative;
+    top: 18px;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.toggle{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.toggle .toggle {
+    position: absolute;
+    font-size: 30px;
+    padding: 10px;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+.signin-container{
+    position: relative;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* min-height: 100vh; */
+}
+.signin-content{
+    width: 350px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow:  0 4px 8px rgba(0, 0, 0, 0.44);
+}
+.input-group{
+    margin: 12px 0px;
+}    
+.input-group input{
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 12px 10px;
+    font-size: 15px;
+}
+input:focus{
+    /* font-weight: bold; */
+    border: none;
+}
+.forgot{
+    margin: 12px 0px;
+}
+.forgot a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    color: rgb(56, 56, 56);
+}
+.forgot a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+.buttons{
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0px 10px; */
+    /* flex-direction: column; */
+    gap: 12px;
+    /* margin: 12px 0px; */
+}
+.buttons .btn{
+    width: 95%;
+    padding: 8px 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 17px;
+    border: 1px solid black;
+}
+.btn:hover{
+    background-color: #e21b70;
+    color: white;
+    border: 1px solid #e21b70;
+}
+
+.link-page{
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.link-page a {
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+}
+
+.link-page a:hover{
+    color: blue;
+    text-decoration: underline;
+} 
+.card-body > .name{
+    color: #e21b70;
+}
+
+@media screen and (max-width: 786px) {
+    .top-banner{
+     width: 100%;
+     height: 65px;
+    }
+     .nav-btn-res{
+     display: none;
+    }
+    .hero-section{
+     width: 100vw;
+    }
+ } 
+
+ @media screen and (max-width: 425px){
+    .bannar-panda{
+        display: none;
+    }
+    .left-section{
+        width: 100%;
+    }
+    .left-section-contant{
+        width: 100%;
+    }
+    .hero-section{
+        width: 100%;
+    }
+}
+ 
