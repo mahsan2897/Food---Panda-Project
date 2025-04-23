@@ -366,21 +366,31 @@ input:focus{
 
 @media screen and (max-width: 786px) {
     .top-banner{
-     width: 100%;
-     height: 65px;
+     width: 90%;
+     height: 50px;
     }
      .nav-btn-res{
-     display: none;
+     position: absolute;
+     right: 130px;
     }
+    .nav-btnes-res{
+        position: relative;
+        right: -15px;
+       }
+    
     .hero-section{
      width: 100vw;
+    }
+    .bannar-panda{
+        position: relative; 
+    }
+    .language-sectoin{
+        display: none;
     }
  } 
 
  @media screen and (max-width: 425px){
-    .bannar-panda{
-        display: none;
-    }
+    
     .left-section{
         width: 100%;
     }
@@ -390,5 +400,53 @@ input:focus{
     .hero-section{
         width: 100%;
     }
+    .nav-btn-res{
+        position: absolute;
+        right: 110px;
+       }
+       .nav-btnes-res{
+           position: relative;
+           right: -15px;
+          }
 }
+@media screen and (max-width: 390px){
+    .nav-btn-res{
+        position: absolute;
+        right: 85px;
+       }
+       .nav-btnes-res{
+           position: relative;
+           right: -15px;
+          }
+        .cart-icon{
+            display: none;
+        }
+}
+@media screen and (max-width: 375px){
+    .nav-btn-res{
+        position: absolute;
+        right: 85px;
+       }
+       .nav-btnes-res{
+           position: relative;
+           right: -15px;
+          }
+        .cart-icon{
+            display: none;
+        }
+}
+@media screen and (max-width: 414px){
+    .nav-btn-res{
+        position: absolute;
+        right: 85px;
+       }
+       .nav-btnes-res{
+           position: relative;
+           right: -15px;
+          }
+        .cart-icon{
+            display: none;
+        }
+}
+ 
  

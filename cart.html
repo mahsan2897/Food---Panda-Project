@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Your Cart</title>
+     <style>
+        .cart-container{
+            margin: 10px;
+        }
+        button {
+          margin-top: 10px;
+          background-color: #dc3545;
+          color: white;
+          border: none;
+          border-radius: 6px;
+          cursor: pointer;
+        }
+        #placeOrderBtn {
+          background-color: #007bff;
+          display: block;
+          padding: 12px 20px;
+          
+        }
+        @media screen and (max-width: 786px) {
+            .nav-btns-res{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+      </style>
+</head>
+<body>
+    <div>
+        <!-- Navigation Bar -->
+        <div class="nav-contant">
+            <div class="nav-logo"></div>
+            <div class="nav-right">
+                <div class="nav-right-contant">
+                    <div class="u-profile">
+                        <a href="#"><i class="fa-regular fa-user"></i></a>
+                    </div>
+                    <div class="signup-login-btns">
+                        <button id="logout" class="signin-btn button nav-btns-res signin-btn-color" type="button">
+                            <a href="./index.html">Log Out</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Content -->
+        <main class="cart-container">
+            <h1>Your Cart</h1>
+            <div id="cartContainer" class="cart-items">
+                <!-- Cart items will be displayed here -->
+            </div>
+            <button id="placeOrderBtn" class="btn btn-primary">Place Order</button>
+        </main>
+    </div>
+
+    <script type="module" src="app.js"></script>
+    <script>
+        function loadCart() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartContainer = document.getElementById("cartContainer");
+
+    if (cart.length === 0) {
+      cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+    } else {
+      cartContainer.innerHTML = '';
+      cart.forEach(item => {
+        cartContainer.innerHTML += `
+          <div class="cart-item">
+            <img  src="${item.image}" alt="${item.name}" />
+            <h3>${item.name}</h3>
+            <h4>Price: ${item.price}</h4>
+            <button onclick="removeFromCart('${item.dishId}')">Remove</button>
+          </div>
+        `;
+      });
+    }
+  }
+
+  function removeFromCart(dishId) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart = cart.filter(item => item.dishId !== dishId);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCart();
+  }
+
+  document.getElementById("placeOrderBtn").addEventListener("click", () => {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    if (cart.length === 0) {
+      alert("Cart is empty!");
+    } else {
+      alert("Order Placed!");
+      localStorage.removeItem("cart");
+      loadCart();
+    }
+  });
+
+  loadCart();
+    </script>
+    
+</body>
+</html>

@@ -7,34 +7,89 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    
     <title>Food & Grocery Delivery - Restaurants near me in Pakistan | foodpanda.</title>
+    <style>
+        .dname, .dprice{
+            margin-left: 10px;
+        }
+        .dbtn{
+            margin-left: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            padding: 6px;
+            background-color: blueviolet;
+            color: #fff;
+            
+        }
+        .dish-image {
+          width: 20%;
+          height: 200px;
+          object-fit: cover;
+          margin: 15px;
+        }
+        #cartBtn {
+          position: fixed;
+          top: 1rem;
+          right: 1rem;
+          padding: 10px 15px;
+          background-color: #28a745;
+          color: white;
+          border: none;
+          border-radius: 6px;
+          cursor: pointer;
+        }
+        @media screen and (max-width: 786px) {
+            .nav-btns-res{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .dish-image {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          margin: 15px;
+        }
+        }
+
+         
+      </style>
 </head>
 <body>
-    <div >
+    <div>
         <div class="nav-contant">
             <div class="nav-logo"></div>
             <div class="nav-right">
                 <div class="nav-right-contant">
                     <div class="u-profile">
-                        <a href="#"><i class="fa-regular fa-user"></i></a>  
+                        <a href="#"><i class="fa-regular fa-user" style="margin-left: 20px;"></i></a>  
                     </div>
-                    <div class="signup-login-btns">
-                        <button id="logout" class="signin-btn button nav-btn-res signin-btn-color" type="button"><a href="#">Log Out</a</button>
-                    </div>
+                    
                     <div class="heart-icon">
-                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#"><i class="fa-regular fa-heart " ></i></a>
                     </div>
                     <div class="cart-icon">
-                        <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                        <a href="cart.html" ><i class="fa-solid fa-bag-shopping" ></i></a>
+                    </div>
+                    <div class="signup-login-btns" >
+                        <button id="logout"  class="signin-btn button nav-btns-res signin-btn-color "  type="button"><a href="./index.html" >Log Out</a></button>
                     </div>
                 </div>
             </div>
         </div>
         
+        <!-- Main Content -->
+        <main class="dashboard-container">
+            <h1 class="text-center" style="margin-left: 10px;" >Available Dishes</h1>
+            <div id="dishesContainer" class="dishes-grid">
+                <!-- Dishes will be dynamically loaded here by JS -->
+            </div>
+        </main>
     </div>
-    <div id="dishesContainer"></div>
-    
+
     <script type="module" src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
 </body>
 </html>
