@@ -77,8 +77,6 @@ if (getLoginBtn) {
           icon: "success"
         })
         console.log(user.email)
-      }).then(() => {
-        location.href = './adminDashboard.html'
       })
       .catch((error) => {
         const errorCode = error.code;
